@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografia y Seguridad Informatica</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> 
+</head>
+<body>
+    <div class="container">
+        <form action="/get_user_info" method="post">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+            <br>
+            <div class="input-wrapper">
+                <label for="access_token">Access Token:</label>
+                <input type="text" id="access_token" name="access_token">
+            </div>
+            <br>
+            <div class="input-wrapper">
+                <label for="user_info_uri">Request user information URI:</label>
+                <input type="text" id="user_info_uri" name="user_info_uri">
+            </div>
+            <br>
+
+            <input type="submit" value="Get user info!">
+        </form>
+    </div>
+</body>
+</html>

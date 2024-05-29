@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografía y Seguridad Informática</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> 
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+        <h1>Oauth Code Flow Response</h1>
+        <p><strong>Authorization Code:</strong> <span class="token">{{ code }}</span></p>
+        <p class="notice">
+            Copy the authorization code to use it in the next step!
+        </p>
+        <p><strong>Scope:</strong> {{ scope }}</p>
+        <p><strong>Original state:</strong> {{ original_state }}</p>
+        <p><strong>Returned state:</strong> {{ return_state }}</p>
+        <p class="notice">
+            {{ message }}
+        </p>
+        <br>
+        <button id="Enter" type="button" onclick="window.location.href = '{{ user_info_url }}';" class="button"> Continue with the Exchange of authorization code for access token</button>
+    </div>
+</body>
+</html>
+a

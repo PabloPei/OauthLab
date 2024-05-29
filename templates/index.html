@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografia y Seguridad Informatica</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+        <br>
+        <button id="OauthCodeFlow" type="button" onclick="redirectToAuth('code_flow')" class="button">Oauth Code Flow</button>
+        <button id="OauthOpenIDFlow" type="button" onclick="redirectToAuth('openid_flow')" class="button">Oauth OpenID Flow</button>
+    </div>
+
+    <script>
+        function redirectToAuth(flowType) {
+            let url = "{{ auth_oauth_code_flow_input }}";
+            window.location.href = url + '?flow=' + flowType;
+        }
+    </script>
+</body>
+</html>

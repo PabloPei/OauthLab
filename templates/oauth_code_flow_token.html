@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografía y Seguridad Informática</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> 
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+        <h1>Oauth Code Flow Response</h1>
+        <p><strong>Access Token:</strong> <span class="token">{{ token }}</span></p>
+        <p class="notice">
+            Copy the access token to use it in the next step!
+        </p>
+        <br>
+        <button id="Enter" type="button" onclick="window.location.href = '{{ user_info_url }}';" class="button">Continue to get user info</button>
+    </div>
+</body>
+</html>

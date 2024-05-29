@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 5%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    margin-left: 16%; 
+    text-align: left;
+}
+
+p {
+    color: #666;
+    margin-bottom: 10px;
+    margin-left: 16%; 
+    text-align: left;
+}
+
+img {
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"] {
+    flex: 0.7;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 10px; 
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+label {
+    flex:0.25;
+    text-align: left;
+    margin-right: 10px;
+    font-weight: bold;
+    margin-left: 10%; 
+}
+
+.user-infoo {
+    width: 50px; /* Ajusta el tamaño del icono según necesites */
+    height: 50px;
+    border-radius: 50%; /* Asegura que la imagen sea redonda */
+    margin-left: 16%;
+    margin-right: -13%;
+}
+
+.container_userinfo {
+    display: flex;
+    align-items: left; /* Centra verticalmente los elementos */
+    margin-top: 20px;
+}
+
+.user-info-text {
+    margin-left: 0px; /* Ajusta el espacio entre la imagen y el texto */
+}
+
+.notice {
+    padding: 15px;
+    margin: 20px;
+    margin-left: 15%;
+    border: 1px solid #c3e6cb;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 4px;
+    font-weight: bold;
+    width: 80%;
+    text-align: center;
+}
+
+.notice2 {
+    padding: 15px;
+    margin: 20px;
+    margin-left: 10%;
+    border: 1px solid #c3e6cb;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 4px;
+    font-weight: bold;
+    width: 80%;
+    text-align: center;
+}
+
+.token {
+    display: block; /* Ensures the text takes the full width available */
+    word-wrap: break-word; /* Allows the text to wrap onto the next line */
+    white-space: pre-wrap; /* Preserves whitespace and allows wrapping */
+    background-color: #f8f9fa; /* Light background color to differentiate */
+    padding: 10px; /* Padding around the text */
+    border: 1px solid #ced4da; /* Border for better visibility */
+    border-radius: 4px; /* Rounded corners */
+    font-family: monospace; /* Monospace font for better readability of the token */
+    overflow-wrap: break-word; /* Ensures the text breaks to fit the container */
+}

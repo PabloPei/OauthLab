@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografía y Seguridad Informática</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> 
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+        <h1>User Info</h1>
+        <div class="container_userinfo">
+            <img class="user-infoo" src="{{ avatar }}" alt="Imagen de GitHub">
+            <p class="user-info"> {{ user_name }} ({{user_email}})</p>
+        </div>
+        
+
+        <button id="Enter" type="button" onclick="window.location.href = '{{ home }}';" class="button">Home</button>
+    </div>
+</body>
+</html>

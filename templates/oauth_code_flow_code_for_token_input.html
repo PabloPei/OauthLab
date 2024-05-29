@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografia y Seguridad Informatica</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> 
+</head>
+<body>
+    <div class="container">
+        <form action="/auth/oauth/exchange_code_for_token" method="post">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+            <br>
+            <div class="input-wrapper">
+                <label for="authorization_code">Authorization Code:</label>
+                <input type="text" id="authorization_code" name="authorization_code">
+            </div>
+            <br>
+            <div class="input-wrapper">
+                <label for="secret_id">Secret ID: </label>
+                <input type="text" id="secret_id" name="secret_id">
+            </div>
+            <br>
+
+            <input type="submit" value="Exchange authorization code for access token">
+        </form>
+    </div>
+</body>
+</html>

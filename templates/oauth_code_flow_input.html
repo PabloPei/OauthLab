@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografia y Seguridad Informatica</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> 
+</head>
+<body>
+    <div class="container">
+        <form action="/auth/oauth_code_flow" method="post">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+            <br>
+            <div class="input-wrapper">
+                <label for="authorization_uri">Authorization URI:</label>
+                <input type="text" id="authorization_uri" name="authorization_uri">
+            </div>
+            <br>
+            <div class="input-wrapper">
+                <label for="redirect_uri">Redirect URI:</label>
+                <input type="text" id="redirect_uri" name="redirect_uri">
+            </div>
+            <br>
+            <div class="input-wrapper">
+                <label for="token_uri">Token exchange URI:</label>
+                <input type="text" id="token_uri" name="token_uri">
+            </div>
+            <br>
+            <div class="input-wrapper">
+                <label for="client_id">Client ID:</label>
+                <input type="text" id="client_id" name="client_id">
+            </div>
+            <br>
+            <div class="input-wrapper">
+                <label for="scope">Scope:</label>
+                <input type="text" id="scope" name="scope">
+            </div>
+            <br>
+            
+            <p class="notice2">
+                The authorization server will respond with a code, which the client can exchange for tokens on a secure channel. 
+                This flow should be used when the application code runs on a secure server (common for MVC and server-rendered pages apps).
+            </p>
+            <br>
+
+            <input type="submit" value="Review Request">
+        </form>
+    </div>
+</body>
+</html>

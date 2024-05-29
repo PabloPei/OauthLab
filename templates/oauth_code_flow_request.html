@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografía y Seguridad Informática</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> 
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+        <h1>Oauth Code Flow Request</h1>
+        <p><strong>Authorization Uri:</strong> {{ url }}</p>
+        <p><strong>Redirect Uri:</strong> {{ redirect_uri }}</p>
+        <p><strong>Token Exchange Uri:</strong> {{ token_uri }}</p>
+        <p><strong>Response Type:</strong> {{ response_type }}</p>
+        <p><strong>Scope:</strong> {{ scope }}</p>
+        <p><strong>State:</strong> {{ oauth_state }}</p>
+        <br>
+        <button id="Enter" type="button" onclick="window.location.href = '{{ authorization_url }}';" class="button">Send Request</button>
+
+    </div>
+</body>
+</html>
