@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oauthlab
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: oauthlab
+  template:
+    metadata:
+      labels:
+        app: oauthlab
+    spec:
+      containers:
+      - name: oauthlab
+        image: registry.digitalocean.com/croauthlab/oauthlab
+        command: ["python", "-u", "app.py"]
+        ports:
+        - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: oauthlab-service
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80  # El puerto en el que el LoadBalancer escuchará
+    targetPort: 5000  # El puerto en el que tu aplicación escucha
+  selector:
+    app: oauthlab

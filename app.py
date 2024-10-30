@@ -23,7 +23,7 @@ app.register_error_handler(409, handle_conflict_error)
 app.register_error_handler(500, handle_generic_error)
 
 ### Conf
-#app.config['SECRET_KEY'] = open(os.environ.get('SECRET_KEY_PATH')).read()
+app.config['SECRET_KEY'] = open(os.environ.get('SECRET_KEY_PATH')).read()
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = os.environ.get('INSECURE_TRANSPORT') 
 
 ### App
