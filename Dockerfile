@@ -1,4 +1,4 @@
 FROM python:3.12.3
-ADD . /ppnaforecast
-WORKDIR /ppnaforecast
+ADD . /OauthLab
+WORKDIR /OauthLab
 RUN pip install -r requirements.txt

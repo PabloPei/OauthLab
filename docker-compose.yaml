@@ -2,18 +2,6 @@ version: '3.8'
 
 services:
 
-  #db:
-  #  image: mongo:7.0.4
-  #  environment:
-  #    MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USERNAME}
-  #    MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
-  #    MONGO_INITDB_DATABASE: ${MONGO_DATABASE}
-
-  #  ports:
-  #    - "27017:27017"
-  #  networks:
-  #    - vnet1
-
   app:
     build: . 
     command: python -u app.py 
@@ -21,8 +9,6 @@ services:
       - 5000:5000
     networks:
       - vnet1
-    #depends_on:
-    #  - db
 
 networks:
   vnet1:

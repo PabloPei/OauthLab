@@ -14,9 +14,6 @@ app = Flask(__name__)
 ### Environment variables
 load_dotenv()
 
-### Blueprints 
-#app.register_blueprint(user_bp) 
- 
 ### Errors
 app.register_error_handler(400, handle_bad_request_error)
 app.register_error_handler(401, handle_unauthorized_error) 
@@ -26,7 +23,7 @@ app.register_error_handler(409, handle_conflict_error)
 app.register_error_handler(500, handle_generic_error)
 
 ### Conf
-app.config['SECRET_KEY'] = open(os.environ.get('SECRET_KEY_PATH')).read()
+#app.config['SECRET_KEY'] = open(os.environ.get('SECRET_KEY_PATH')).read()
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = os.environ.get('INSECURE_TRANSPORT') 
 
 ### App
